@@ -387,7 +387,7 @@ function buildReviewPrompt(opts, diff) {
       : "Scope: the uncommitted working-tree changes.",
   );
   lines.push(
-    "The diff to review is included below. You may also read the changed files for surrounding context, but base your findings on this diff.",
+    "Base your review solely on the diff below. Do NOT use any tools (no shell, no file reads) — review the diff as given and answer directly with your findings as text.",
   );
   if (diff.truncated) {
     lines.push(
