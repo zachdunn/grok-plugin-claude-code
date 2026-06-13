@@ -5,17 +5,17 @@
   },
   "metadata": {
     "description": "A lightweight Grok plugin for Claude Code — delegate coding and review tasks to the Grok CLI.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
-      "name": "grok",
+      "name": "grok-cc",
       "description": "Use Grok from Claude Code to delegate coding, debugging, and review tasks.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "Zach Dunn"
       },
-      "source": "./plugins/grok"
+      "source": "./plugins/grok-cc"
     }
   ]
 }

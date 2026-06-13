@@ -18,4 +18,4 @@ node "${CLAUDE_PLUGIN_ROOT}/scripts/grok-companion.mjs" task <flags> "<task desc
 
 4. Return the companion's stdout as-is. Do not add your own analysis before or after it.
 
-If the companion reports Grok is not installed or not signed in, tell the user to run `/grok:setup`.
+If the companion reports Grok is not installed or not signed in, tell the user to run `/grok-cc:setup`.

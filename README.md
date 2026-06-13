@@ -2,7 +2,7 @@
 
 A lightweight [Claude Code](https://claude.com/claude-code) plugin that lets you
 delegate coding, debugging, and review tasks to the [Grok CLI](https://grok.com)
-— spawn a `grok-rescue` subagent or run `/grok:rescue <task>` and Grok works the
+— spawn a `grok-rescue` subagent or run `/grok-cc:rescue <task>` and Grok works the
 problem as a parallel agent.
 
 > This is essentially a simple, unofficial reimplementation of OpenAI's
@@ -17,8 +17,8 @@ problem as a parallel agent.
 | Component | What it does |
 | --- | --- |
 | `grok-rescue` subagent | Thin forwarder. Hand it a substantial task (via the Agent tool / `@grok-rescue`) and it delegates to Grok. |
-| `/grok:rescue <task>` | One-shot delegation with optional routing flags. |
-| `/grok:setup` | Verifies the Grok CLI is installed and signed in. |
+| `/grok-cc:rescue <task>` | One-shot delegation with optional routing flags. |
+| `/grok-cc:setup` | Verifies the Grok CLI is installed and signed in. |
 | `grok-cli-runtime` skill | Reference for how the companion drives Grok. |
 | `grok-companion.mjs` | The runtime that wraps `grok -p --output-format json`. |
 
@@ -41,24 +41,24 @@ From within Claude Code:
 
 ```text
 /plugin marketplace add zachdunn/grok-plugin-claude-code
-/plugin install grok@grok-plugin-claude-code
+/plugin install grok-cc@grok-plugin-claude-code
 ```
 
 Or with the CLI:
 
 ```bash
 claude plugin marketplace add zachdunn/grok-plugin-claude-code
-claude plugin install grok@grok-plugin-claude-code
+claude plugin install grok-cc@grok-plugin-claude-code
 ```
 
-Then `/grok:setup` to confirm Grok is ready.
+Then `/grok-cc:setup` to confirm Grok is ready.
 
 ## Usage
 
 ```text
-/grok:rescue fix the failing auth test in apps/api
-/grok:rescue --read why is the diorama pan jittery on tilt?
-/grok:rescue --background --effort high refactor the camera rig
+/grok-cc:rescue fix the failing auth test in apps/api
+/grok-cc:rescue --read why is the diorama pan jittery on tilt?
+/grok-cc:rescue --background --effort high refactor the camera rig
 ```
 
 Routing flags (stripped before the task text reaches Grok):
@@ -80,7 +80,7 @@ Routing flags (stripped before the task text reaches Grok):
 
 ```text
 .claude-plugin/marketplace.json   # marketplace manifest
-plugins/grok/                     # the plugin itself
+plugins/grok-cc/                     # the plugin itself
   .claude-plugin/plugin.json
   agents/grok-rescue.md
   commands/{setup,rescue}.md

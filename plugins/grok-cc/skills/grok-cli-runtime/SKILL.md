@@ -1,6 +1,6 @@
 ---
 name: grok-cli-runtime
-description: How to delegate tasks to the Grok CLI from Claude Code via the grok-companion runtime. Use when forwarding a coding, debugging, or review task to Grok, when driving `grok` headlessly, or when the grok-rescue subagent or /grok:rescue command needs to invoke the companion. Covers task vs read-only runs, foreground vs background, and routing flags.
+description: How to delegate tasks to the Grok CLI from Claude Code via the grok-companion runtime. Use when forwarding a coding, debugging, or review task to Grok, when driving `grok` headlessly, or when the grok-rescue subagent or /grok-cc:rescue command needs to invoke the companion. Covers task vs read-only runs, foreground vs background, and routing flags.
 ---
 
 # Grok CLI runtime
