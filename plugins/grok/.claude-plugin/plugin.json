@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "grok",
+  "version": "0.1.0",
+  "description": "Delegate coding and review tasks to the Grok CLI from Claude Code, like the codex plugin.",
+  "author": {
+    "name": "Zach Dunn",
+    "email": "zach@rally.space"
+  },
+  "skills": [
+    "./skills/grok-cli-runtime"
+  ]
+}
