@@ -24,8 +24,11 @@ problem as a parallel agent.
 
 ## Requirements
 
-- The [`grok` CLI](https://grok.com) on your `PATH` (or at `~/.grok/bin/grok`;
-  override with the `GROK_BIN` env var).
+- **Grok CLI access.** This plugin drives xAI's Grok CLI ("grok build"), which
+  requires access — see [x.ai/cli](https://x.ai/cli). Without it the plugin has
+  nothing to delegate to.
+- The `grok` CLI on your `PATH` (or at `~/.grok/bin/grok`; override with the
+  `GROK_BIN` env var).
 - Signed in: `grok login`.
 - Node (used to run the companion script).
 

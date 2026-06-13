@@ -16,6 +16,7 @@ Grok's headless mode.
 
 ## Requirements
 
+- Grok CLI access ("grok build") — see [x.ai/cli](https://x.ai/cli).
 - The `grok` CLI on `PATH` (or at `~/.grok/bin/grok`; override with `GROK_BIN`).
 - Signed in: `grok login`. Delegation sends prompts + read code to xAI's backend.
 - Node (used to run the companion).
